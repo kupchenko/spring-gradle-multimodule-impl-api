@@ -1,0 +1,5 @@
+rootProject.name = 'spring-gradle-multimodule-impl-api'
+include 'domain1:api'
+include 'domain2:api'
+include 'domain1:impl'
+include 'domain2:impl'
