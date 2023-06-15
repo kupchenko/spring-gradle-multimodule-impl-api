@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping("/domain1")
 @AllArgsConstructor
-public class Domain2Controller implements Domain1Client {
+public class Domain1Controller implements Domain1Client {
   private final Domain1Service domain1Service;
 
   @Override
