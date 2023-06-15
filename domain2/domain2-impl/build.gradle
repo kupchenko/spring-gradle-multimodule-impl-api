@@ -1,0 +1,4 @@
+dependencies {
+    implementation project(':domain2:domain2-api')
+    implementation project(':domain1:domain1-api')
+}

@@ -1,6 +1,6 @@
 dependencies {
-    implementation project(':domain1:impl')
-    implementation project(':domain2:impl')
+    implementation project(':domain1:domain1-impl')
+    implementation project(':domain2:domain2-impl')
 }
 
 bootJar {
