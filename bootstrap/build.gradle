@@ -1,0 +1,14 @@
+dependencies {
+    implementation project(':domain1')
+    implementation project(':domain2')
+}
+
+bootJar {
+    enabled = true
+    archiveFileName = "service.jar"
+    mainClass = 'me.kupchenko.bootstrap.SpringMultiModuleApp'
+}
+
+jar {
+    enabled = false
+}

@@ -1,24 +1,36 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.12'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '2.7.4'
+    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
 }
 
-group = 'me.kupchenko'
-version = '0.0.1-SNAPSHOT'
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
 
-java {
-    sourceCompatibility = '17'
-}
+    repositories {
+        mavenCentral()
+    }
 
-repositories {
-    mavenCentral()
+    bootJar {
+        enabled = false
+    }
+
+    jar {
+        enabled = true
+    }
 }
 
 subprojects {
     apply plugin: 'java'
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
+
+    group = 'me.kupchenko'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '1.8'
+
     configurations {
         compileOnly {
             extendsFrom annotationProcessor
@@ -32,7 +44,7 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
 
-    tasks.named('test') {
+    test {
         useJUnitPlatform()
     }
 

@@ -1,4 +1,4 @@
 package me.kupchenko.springgradlemultimoduleimplapi;
 
-public class Domain1Dto1 {
+public class Domain2Dto1 {
 }
